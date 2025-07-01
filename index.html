@@ -3,12 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!--=============== FAVICON ===============-->
     <link
       rel="shortcut icon"
       href="assets/img/favicon.png"
       type="image/x-icon"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
     <!--=============== REMIXICONS ===============-->
@@ -20,13 +27,13 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <title>Responsive bakery website</title>
+    <title>Sitarina's</title>
   </head>
   <body>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="#" class="nav__logo">Bakery</a>
+        <a href="#" class="nav__logo">sitarina's</a>
 
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
@@ -34,13 +41,10 @@
               <a href="#home" class="nav__link">Home</a>
             </li>
             <li class="nav__item">
-              <a href="#news" class="nav__link">News</a>
-            </li>
-            <li class="nav__item">
               <a href="#about" class="nav__link">About Us</a>
             </li>
             <li class="nav__item">
-              <a href="#favorite" class="nav__link">Favorites</a>
+              <a href="#favorite" class="nav__link">Product</a>
             </li>
             <li class="nav__item">
               <a href="#visit" class="nav__link">Location</a>
@@ -67,81 +71,81 @@
     <main class="main">
       <!--==================== HOME ====================-->
       <section class="home section" id="home">
-        <img src="assets/img/home-bg.jpg" alt="images" class="home__bg" />
-        <div class="home__shadow"></div>
+    <div class="swiper homeSwiper">
+      <div class="swiper-wrapper">
 
-        <div class="home__container container grid">
-          <div class="home__data">
-            <h1 class="home__title">
-              Select The Best <br />
-              Quality Breads
-            </h1>
-
-            <a href="#" class="button">Select Breads</a>
-
-            <img src="assets/img/bread-1.png" alt="image" class="home__bread" />
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="home__slide">
+            <img src="assets/img/slider 1.png" alt="Slide 1" />
+            <a href="#" class="button">View Collection</a>
           </div>
-
-          <div class="home__image">
-            <img
-              src="assets/img/home-bread.png"
-              alt="image"
-              class="home__img"
-            />
-          </div>
-
-          <footer class="home__footer">
-            <div class="home__location">
-              <i class="ri-map-pin-line"></i>
-              <span
-                >AV. The Sun #321 <br />
-                Lima Peru</span
-              >
-            </div>
-
-            <div class="home__social">
-              <a
-                href="https://facebook.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="ri-facebook-circle-line"></i>
-              </a>
-              <a
-                href="https://instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="ri-instagram-line"></i>
-              </a>
-              <a
-                href="https://youtube.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="ri-youtube-line"></i>
-              </a>
-            </div>
-          </footer>
         </div>
-      </section>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="home__slide">
+            <img src="assets/img/slider 2.png" alt="Slide 2" />
+            <a href="#" class="button">Order Now</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="home__slide">
+            <img src="assets/img/slider 3.png" alt="Slide 3" />
+            <a href="#" class="button">Contact Us</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigasi -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <!-- ================= Script ================= -->
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Swiper Initialization -->
+  <script>
+    var swiper = new Swiper(".homeSwiper", {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 
       <!--==================== NEWS ====================-->
       <section class="new section" id="new">
-        <h2 class="section__title">New Breads</h2>
+        <h2 class="section__title">Classic Product</h2>
 
         <div class="new__container container grid">
           <div class="new__content grid">
             <article class="new__card">
               <div class="new__data">
-                <h2 class="new__title">Rye Bread</h2>
+                <h2 class="new__title">Cream and Cheese</h2>
                 <p class="new__description">
-                  Baked with healthy, gluten-free sourdough for good nutrition.
+                  Crepe lembut yang dilapis krim cokelat yang creamy banget. Rasa cokelatnya rich, lembut, dan lumer di mulut.
                 </p>
               </div>
 
               <img
-                src="assets/img/new-bread-1.png"
+                src="assets/img/CNC.png"
                 alt="Image New Bread"
                 class="new__img"
               />
@@ -149,14 +153,14 @@
 
             <article class="new__card">
               <div class="new__data">
-                <h2 class="new__title">Whole Grain Bread</h2>
+                <h2 class="new__title">PBnC</h2>
                 <p class="new__description">
-                  Crispy and homemade prepared from organic yeast-free flour.
+                  Crepe yang ringan dan creamy, dilapis krim keju yang lembut. Rasanya pas banget—manisnya dapet, gurihnya juga dapet.
                 </p>
               </div>
 
               <img
-                src="assets/img/new-bread-2.png"
+                src="assets/img/PBnC.png"
                 alt="Image New Bread"
                 class="new__img"
               />
@@ -164,22 +168,21 @@
 
             <article class="new__card">
               <div class="new__data">
-                <h2 class="new__title">Multigrain Bread</h2>
+                <h2 class="new__title">Strawberry</h2>
                 <p class="new__description">
-                  Tasty and made with different natural grains from the
-                  countryside.
+                  Lapisan crepe yang lembut, diisi krim stroberi yang ringan, dipadukan dengan sentuhan rasa buah asli.
                 </p>
               </div>
 
               <img
-                src="assets/img/new-bread-3.png"
+                src="assets/img/Stro.png"
                 alt="Image New Bread"
                 class="new__img"
               />
             </article>
           </div>
 
-          <a href="#" class="new__button button">See More Breads</a>
+          <a href="#" class="new__button button">See More Mille Crepes</a>
         </div>
       </section>
 
@@ -187,13 +190,11 @@
       <section class="about section" id="about">
         <div class="about__container container grid">
           <div class="about__data">
-            <h2 class="section__title">About Us</h2>
+            <h2 class="section__title">About Sitarina's</h2>
 
             <p class="about__description">
-              We prepare all types of bread that are made at home, maintaining
-              the tradition of using only the best ingredients made with local
-              products whenever possible. We have an extensive line of freshly
-              prepared bakery and coffee products.
+              Sitarina’s adalah brand dessert yang lahir dari cinta buat bikin mille crepes yang cantik, handmade, dan pastinya enak banget. Buat kami, dessert yang enak itu datang dari bahan-bahan yang berkualitas dan dibuat dengan penuh perhatian. Makanya, setiap mille crepes di Sitarina’s disusun dengan telaten, pakai krim terbaik, dan pastinya penuh rasa.
+              Mille crepes kita itu terbuat dari banyak lapisan crepe yang super tipis dan lembut, diselingi krim yang halus dan creamy di setiap lapisannya. Di Sitarina’s, kita nggak cuma jual kue, tapi juga bagi-bagi momen spesial. Mau buat ulang tahun, traktiran, atau cuma pengen ngemil manis, mille crepes kita selalu siap nemenin. Kita selalu komit buat kasih kualitas terbaik, rasa yang konsisten, dan bikin pelanggan happy—karena buat kita, dessert itu harus bisa bikin hidup jadi sedikit lebih magic.
             </p>
 
             <a href="#" class="button">Know More</a>
@@ -206,7 +207,7 @@
           </div>
 
           <img
-            src="assets/img/about-bread.png"
+            src="assets/img/about sitarina.jpg"
             alt="image"
             class="about__img"
           />
@@ -215,20 +216,35 @@
 
       <!--==================== FAVORITES ====================-->
       <section class="favorite section" id="favorite">
-        <h2 class="section__title">Customer Favorites</h2>
+        <h2 class="section__title">Classic</h2>
 
         <div class="favorite__container container grid">
+           <article class="favorite__card">
+          <img src="assets/img/Chocolate.png" alt="Chocolate" class="favorite__img"/>
+
+        <div class="favorite__data">
+        <h3 class="favorite__title">Chocolate</h3>
+        <span class="favorite__subtitle">Mille Crepes</span>
+        <span class="favorite__price">Rp. 14.000</span>
+        </div>
+
+    <!-- Tombol + untuk buka modal -->
+      <button class="favorite__button button" onclick="openModal('modalChocolate')">
+      <i class="ri-add-line"></i>
+      </button>
+      </article>
+
           <article class="favorite__card">
             <img
-              src="assets/img/favorite-bread-1.png"
+              src="assets/img/Stro.png"
               alt="image"
               class="favorite__img"
             />
 
             <div class="favorite__data">
-              <h3 class="favorite__title">Whole Grain</h3>
-              <span class="favorite__subtitle">Bread</span>
-              <span class="favorite__price">$6.00</span>
+              <h3 class="favorite__title">Strawberry</h3>
+              <span class="favorite__subtitle">Mille Crepes</span>
+              <span class="favorite__price">Rp. 14.000</span>
             </div>
 
             <button class="favorite__button button">
@@ -238,15 +254,15 @@
 
           <article class="favorite__card">
             <img
-              src="assets/img/favorite-bread-2.png"
+              src="assets/img/GT.png"
               alt="image"
               class="favorite__img"
             />
 
             <div class="favorite__data">
-              <h3 class="favorite__title">Rye</h3>
-              <span class="favorite__subtitle">Bread</span>
-              <span class="favorite__price">$8.00</span>
+              <h3 class="favorite__title">Green Tea</h3>
+              <span class="favorite__subtitle">Mille Crepes</span>
+              <span class="favorite__price">Rp. 14.000</span>
             </div>
 
             <button class="favorite__button button">
@@ -256,15 +272,15 @@
 
           <article class="favorite__card">
             <img
-              src="assets/img/favorite-bread-3.png"
+              src="assets/img/Bluberry.png"
               alt="image"
               class="favorite__img"
             />
 
             <div class="favorite__data">
-              <h3 class="favorite__title">Wheat</h3>
-              <span class="favorite__subtitle">Bread</span>
-              <span class="favorite__price">$3.00</span>
+              <h3 class="favorite__title">Blueberry</h3>
+              <span class="favorite__subtitle">Mille Crepes</span>
+              <span class="favorite__price">Rp. 14.0000</span>
             </div>
 
             <button class="favorite__button button">
@@ -274,15 +290,15 @@
 
           <article class="favorite__card">
             <img
-              src="assets/img/favorite-bread-4.png"
+              src="assets/img/CNC.png"
               alt="image"
               class="favorite__img"
             />
 
             <div class="favorite__data">
-              <h3 class="favorite__title">Multigrain</h3>
-              <span class="favorite__subtitle">Bread</span>
-              <span class="favorite__price">$5.00</span>
+              <h3 class="favorite__title">Cookies and Cream</h3>
+              <span class="favorite__subtitle">Mille Crepes</span>
+              <span class="favorite__price">Rp. 14.000</span>
             </div>
 
             <button class="favorite__button button">
@@ -292,33 +308,15 @@
 
           <article class="favorite__card">
             <img
-              src="assets/img/favorite-bread-5.png"
+              src="assets/img/PBnC.png"
               alt="image"
               class="favorite__img"
             />
 
             <div class="favorite__data">
-              <h3 class="favorite__title">Sourdough</h3>
-              <span class="favorite__subtitle">Bread</span>
-              <span class="favorite__price">$7.00</span>
-            </div>
-
-            <button class="favorite__button button">
-              <i class="ri-add-line"></i>
-            </button>
-          </article>
-
-          <article class="favorite__card">
-            <img
-              src="assets/img/favorite-bread-6.png"
-              alt="image"
-              class="favorite__img"
-            />
-
-            <div class="favorite__data">
-              <h3 class="favorite__title">French</h3>
-              <span class="favorite__subtitle">Bread</span>
-              <span class="favorite__price">$3.00</span>
+              <h3 class="favorite__title">Peanut Butter and Cheese</h3>
+              <span class="favorite__subtitle">Mille Crepes</span>
+              <span class="favorite__price">Rp. 14.000</span>
             </div>
 
             <button class="favorite__button button">
@@ -328,11 +326,144 @@
         </div>
       </section>
 
+      <section class="favorite section" id="favorite">
+        <h2 class="section__title">Special Edition</h2>
+
+        <div class="favorite__container container grid">
+          <article class="favorite__card">
+            <img
+              src="assets/img/Red Velvet.png"
+              alt="image"
+              class="favorite__img"
+            />
+
+            <div class="favorite__data">
+              <h3 class="favorite__title">Red Velvet</h3>
+              <span class="favorite__subtitle">Mille Crepes</span>
+              <span class="favorite__price">Rp. 14.000</span>
+            </div>
+
+            <button class="favorite__button button">
+              <i class="ri-add-line"></i>
+            </button>
+          </article>
+
+          <article class="favorite__card">
+            <img
+              src="assets/img/Blueberry Cream Cheese.png"
+              alt="image"
+              class="favorite__img"
+            />
+
+            <div class="favorite__data">
+              <h3 class="favorite__title">Blueberry Cream Cheese</h3>
+              <span class="favorite__subtitle">Mille Crepes</span>
+              <span class="favorite__price">Rp. 14.000</span>
+            </div>
+
+            <button class="favorite__button button">
+              <i class="ri-add-line"></i>
+            </button>
+          </article>
+          </div>
+      </section>
+
+       <section class="favorite section" id="favorite">
+        <h2 class="section__title">Whole Cake</h2>
+
+        <div class="favorite__container container grid">
+          <article class="favorite__card">
+            <img
+              src="assets/img/Bluberry.png"
+              alt="image"
+              class="favorite__img"
+            />
+
+            <div class="favorite__data">
+              <h3 class="favorite__title">Blueberry</h3>
+              <span class="favorite__subtitle">Whole Cake</span>
+              <span class="favorite__price">Rp. 120.000</span>
+            </div>
+
+            <button class="favorite__button button">
+              <i class="ri-add-line"></i>
+            </button>
+          </article>
+
+          <article class="favorite__card">
+            <img
+              src="assets/img/Chocolate.png"
+              alt="image"
+              class="favorite__img"
+            />
+
+            <div class="favorite__data">
+              <h3 class="favorite__title">Chocolate</h3>
+              <span class="favorite__subtitle">Whole Cake</span>
+              <span class="favorite__price">Rp. 120.000</span>
+            </div>
+
+            <button class="favorite__button button">
+              <i class="ri-add-line"></i>
+            </button>
+          </article>
+
+          <article class="favorite__card">
+            <img
+              src="assets/img/CNC.png"
+              alt="image"
+              class="favorite__img"
+            />
+
+            <div class="favorite__data">
+              <h3 class="favorite__title">Cookies and Cream</h3>
+              <span class="favorite__subtitle">Whole Cake</span>
+              <span class="favorite__price">Rp. 120.000</span>
+            </div>
+
+            <button class="favorite__button button">
+              <i class="ri-add-line"></i>
+            </button>
+          </article>
+
+          <article class="favorite__card">
+            <img
+              src="assets/img/Red Velvet.png"
+              alt="image"
+              class="favorite__img"
+            />
+
+            <div class="favorite__data">
+              <h3 class="favorite__title">Red Velvet</h3>
+              <span class="favorite__subtitle">Whole Cake</span>
+              <span class="favorite__price">Rp. 120.000</span>
+            </div>
+
+            <button class="favorite__button button">
+              <i class="ri-add-line"></i>
+            </button>
+          </article>
+        </div>
+      </section>
+
+    <!--==================== MODAL ====================-->
+      <div class="modal" id="modalChocolate">
+      <div class="modal__content">
+      <span class="close" onclick="closeModal('modalChocolate')">&times;</span>
+      <img src="assets/img/Chocolate.png" alt="Chocolate Crepes" class="modal__img" />
+      <h3 class="modal__title">Chocolate Mille Crepes</h3>
+      <p class="modal__desc">
+      Chocolate Mille Crepes yang lembut dan manis, terdiri dari lapisan crepes tipis dengan krim coklat berkualitas di setiap lapisannya. Nikmati rasa klasik yang tak pernah gagal.
+      </p>
+      <a href="https://wa.me/6285724887713?text=Halo,%20saya%20mau%20pesan%20Chocolate%20Mille%20Crepes" class="button">Pesan Sekarang</a>
+      </div>
+      </div>
+
       <!--==================== VISIT ====================-->
       <section class="visit section" id="visit">
         <div class="visit__container">
           <img
-            src="assets/img/visit-bg.jpg"
+            src="assets/img/visit sitarina.jpg"
             alt="visit img"
             class="visit__bg"
           />
@@ -343,23 +474,36 @@
               <h2 class="visit__title">Visit Us</h2>
 
               <p class="visit__description">
-                Discovery the best bread, we look forward to your visit.
+                Discovery the best cake, we look forward to your visit.
               </p>
 
               <a href="#" class="button">See Location</a>
             </div>
-          </div>
-        </div>
-      </section>
+      <!-- Maps -->
+  <div class="maps">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63352.75907340143!2d107.6667561681617!3d-6.94286438223869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e91ce8103fb9%3A0x3402de08b13a79a!2sCiwastra%2C%20Kec.%20Buahbatu%2C%20Kota%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1719711273403!5m2!1sid!2sid" 
+      width="100%" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
     </main>
+
+
+    
 
     <!--==================== FOOTER ====================-->
     <footer class="footer">
       <div class="footer__container container grid">
          <div>
-            <a href="#" class="footer__logo">Bakery</a>
+            <a href="#" class="footer__logo">Mille Crepes</a>
             <p class="footer__description">
-               We make the best bread <br> in the city
+               We make the best mille crepes <br> in the city
             </p>
          </div>
 
@@ -369,11 +513,11 @@
 
                <ul class="footer__list">
                   <li>
-                     <address class="footer__info">Av. The sun #321 <br> Lima Peru</address>
+                     <address class="footer__info">Ciwastra, Bandung <br> Jawa Barat</address>
                   </li>
                   
                   <li>
-                     <address class="footer__info">9AM - 11PM</address>
+                     <address class="footer__info">9AM - 8PM</address>
                   </li>
                </ul>
             </div>
@@ -382,11 +526,11 @@
 
                <ul class="footer__list">
                   <li>
-                     <address class="footer__info">bakery@email.com</address>
+                     <address class="footer__info">sitarinas@gmail.com</address>
                   </li>
 
                   <li>
-                     <address class="footer__info">+00 987 654 321</address>
+                     <address class="footer__info">+62 857 2488 7713</address>
                   </li>
                </ul>
             </div>

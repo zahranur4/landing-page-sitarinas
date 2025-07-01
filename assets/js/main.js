@@ -90,3 +90,54 @@ sr.reveal(`.new__card:nth-child(3) img`, {roate: {z: -30}, distance: 0, delay: 9
 sr.reveal(`.favorite__card img`, {internal: 100, roate: {z: 15}, distance: 0})
 
 sr.reveal(`.footer__container`, {scale: 1})
+
+ function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  // Tutup modal ketika klik di area luar modal
+  window.onclick = function (event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+      });
+  };
+
+  const form = document.getElementById('orderForm');
+
+if (form) {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const produk = document.getElementById('produk').value;
+    const harga = document.getElementById('harga').value;
+    const nama = document.getElementById('nama').value;
+    const nomor = document.getElementById('nomor').value;
+    const alamat = document.getElementById('alamat').value;
+
+    const pesan = `Halo, saya ingin memesan ${produk}.
+
+Detail Pesanan:
+Produk: ${produk}
+Harga: Rp.${harga}
+Nama: ${nama}
+Nomor: ${nomor}
+Alamat: ${alamat}
+
+Terima kasih.`;
+
+    const encodedPesan = encodeURIComponent(pesan);
+    const whatsappLink = `https://wa.me/6285724887713?text=${encodedPesan}`;
+
+    window.open(whatsappLink, '_blank');
+  });
+}
+
+
+  
