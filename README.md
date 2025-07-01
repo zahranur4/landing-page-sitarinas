@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🥯 Responsive Bakery Landing Page
 
 Discover a variety of high-quality breads with authentic flavors that make every bite an unforgettable experience. From soft wheat bread to crispy croissants, Pekan Bakery serves up an exquisite selection to satisfy your taste buds.
@@ -16,3 +17,7 @@ Discover a variety of high-quality breads with authentic flavors that make every
 💙 Thanks to see more my portfolio and like this.
 
 ![preview img](/preview.png)
+=======
+# landing-page-sitarinas
+Landing page untuk Sitarina's 🥐🍰⭐
+>>>>>>> 6d4ace4f281e3720f4d648bffbe0483cfa2d8cad
